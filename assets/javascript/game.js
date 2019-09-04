@@ -95,7 +95,7 @@ function compareLetters(userKey)
 							document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
 						}	
 					}
-					//Test / Debug
+					
 					console.log(blanksAndSuccesses);
 				}
 				//Wrong Keys
@@ -106,7 +106,7 @@ function compareLetters(userKey)
 					//Changes HTML
 					document.getElementById('numGuesses').innerHTML = guessesLeft;
 					document.getElementById('wrongGuesses').innerHTML = wrongLetters;
-					//Test / Debug
+					
 					console.log('Wrong Letters = ' + wrongLetters);
 					console.log('Guesses left are ' + guessesLeft);
 				}
@@ -123,7 +123,7 @@ function winLose()
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
-		alert("you win!")
+		alert(randomWord + "\nYou Win!")
 		reset();
 	}
 	// When number of Guesses reaches 0 then You lose
@@ -133,12 +133,13 @@ function winLose()
 		loseCount++;
 		//Changes HTML
         document.getElementById('lossCounter').innerHTML = loseCount;
-        alert("You lost!")
+		alert(randomWord + "\nYou Lost!")
 		reset();
 	}
 }
 
 //MAIN PROCCESS
+
 //Initiates the Code
 startGame();
 
@@ -151,7 +152,7 @@ document.onkeyup = function(event)
 		if(letterGuessed === doubleWord[i] && test === true)
 		{
 			var spliceDword = doubleWord.splice(i,1);
-			//Test / Debug
+			
 			console.log('Double word is = ' + doubleWord[i])
 			console.log('Spliced Word is = ' + spliceDword);
 
