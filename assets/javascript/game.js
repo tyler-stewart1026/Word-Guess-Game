@@ -21,7 +21,9 @@ var winCount = 0;
 var loseCount = 0;
 var guessesLeft = 10;
 var rightGuessCounter = 0;
-
+// Music attempt
+// var audio = new Audio('/assets/images/the-buccaneers-haul.mps');
+// audio.play();
 //FUNCTIONS
 function reset()
 {
