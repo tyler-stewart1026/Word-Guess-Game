@@ -125,8 +125,8 @@ function winLose()
 		winCount++;
 		//Changes HTML
 		document.getElementById('winCounter').innerHTML = winCount;
-		swal(randomWord  + "!" + "\nYou Win!") 
-		// alert(randomWord + "\nYou Win!")
+		// swal(randomWord + "!" + "\nYou Win!") 
+		swal(randomWord+"!", "\nYou Win!");
 		reset();
 	}
 	// When number of Guesses reaches 0 then You lose
@@ -136,9 +136,9 @@ function winLose()
 		loseCount++;
 		//Changes HTML
 		document.getElementById('lossCounter').innerHTML = loseCount;
-		swal(randomWord + "!" + "\nYou Lost!");
-		// alert(randomWord + "\nYou Lost!")
+		swal(randomWord+"!", "\nYou Lose!");
 		reset();
+		
 	}
 }
 
